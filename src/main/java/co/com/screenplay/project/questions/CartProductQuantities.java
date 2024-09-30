@@ -20,8 +20,8 @@ public class CartProductQuantities implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
 
-        String actualQuantityFirstProduct = Text.of(FIRST_PRODUCT_QUANTITY).answeredBy(actor);
-        String actualQuantitySecondProduct = Text.of(SECOND_PRODUCT_QUANTITY).answeredBy(actor);
+        String actualQuantityFirstProduct = Value.of(FIRST_PRODUCT_QUANTITY).answeredBy(actor);
+        String actualQuantitySecondProduct = Value.of(SECOND_PRODUCT_QUANTITY).answeredBy(actor);
 
         return actualQuantityFirstProduct.equals(expectedQuantityFirstProduct) &&
                 actualQuantitySecondProduct.equals(expectedQuantitySecondProduct);
